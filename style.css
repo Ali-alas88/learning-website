@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  text-transform: capitalize;
+}
+html{
+  scroll-behavior: smooth;
+}
+:root {
+  --main-color: #8e44ad;
+  --red: #e74c3c;
+  --orange: #f39c12;
+  --light-color: #bebebe;
+  --light-bg: #eee;
+  --black: #2c3e50;
+  --white: #fff;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--light-bg);
+  font-family: "Poppins", sans-serif;
+  /* color: var(--white); */
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+.btn {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid var(--orange);
+  color: #fff;
+  background-color: var(--orange);
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 800;
+  font-size: 16px;
+  height: 42px;
+  margin-top: 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--black);
+}
+/* ========================END OF GENERAL STYLE====================== */
+
+/* =======================HEADER START================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 15%;
+  width: 85%;
+  height: 4rem;
+  padding: 0.5rem;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  background-color: var(--white);
+}
+
+.header .search-form {
+  background-color: var(--light-bg);
+  /* border-radius: rem; */
+  padding: 0.7rem;
+  text-align: center;
+  width: 30rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .search-form input {
+  background-color: var(--light-bg);
+  width: 100%;
+  /* padding: 20px; */
+}
+
+.header .search-form > button {
+  background: transparent;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+#search-btn {
+  display: none;
+}
+
+.logo-header {
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  display: none;
+}
+.logo-header span {
+  color: var(--main-color);
+}
+
+#menu {
+  display: none;
+}
+
+.header .icons div {
+  font-size: 1.3rem;
+  color: var(--main-color);
+  margin-right: 0.5rem;
+  cursor: pointer;
+  /* background-color: var(--light-color); */
+  padding: 5px;
+}
+
+/* =======================HEADER END================ */
+
+/* =======================SIDEBAR START================ */
+
+.sidebar {
+  background-color: var(--white);
+  border-right: var(--border);
+  position: fixed;
+  top: 0;
+  min-height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 99;
+  /* display: none; */
+}
+
+.sidebar .logo {
+  width: 100%;
+  height: 3rem;
+  /* border-bottom: 1px solid var(--light-color); */
+}
+
+.logo h3 {
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  margin-left: 0.5rem;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.navbar {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+.navbar a {
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+}
+.navbar a:hover {
+  background-color: var(--orange);
+  color: white;
+}
+.navbar a > span {
+  /* border: 1px solid; */
+  transition: all 0.3s ease-in-out;
+}
+.navbar a:hover > span {
+  padding-left: 10px;
+  color: white;
+}
+.navbar i {
+  font-size: 1rem;
+  color: var(--main-color);
+}
+
+.navbar a span {
+  margin-left: 0.5rem;
+  color: var(--black);
+}
+
+/* =======================SIDEBAR END================ */
+
+/* ====================MAIN  SECTIONS START ================== */
+
+main {
+  /* max-width: 1200px; */
+  width: 85%;
+  padding: 20px;
+  position: absolute;
+  top: 4rem;
+  left: 15%;
+  height: fit-content;
+}
+
+/* =============HER0 SECTIONS=================== */
+.Hero {
+  width: 100%;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-gap: 0.8rem; */
+  /* border: 2px solid red; */
+  place-items: center;
+
+}
+
+.hero-text h2 {
+  font-size: clamp(1rem, 5vw, 1.7rem);
+  line-height: 2rem;
+  margin-bottom: 0.6rem;
+
+}
+.hero-text h2>span{
+  color: var(--main-color);
+}
+.hero-text p {
+  line-height: 1.5;
+  font-size: clamp(0.7rem, 5vw, 1rem);
+  font-weight: 500;
+
+}
+
+
+
+/* ============= END HER0 SECTIONS=================== */
+
+
+
+/* ============= STAR COURSES SECTIONS=================== */
+.Courses{
+  max-width: 1200px;
+  margin: 0 auto;
+  height: fit-content;
+  
+}
+.Courses h2{
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 1.7rem);
+}
+.courses-grid {
+  /* width: 100%; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  place-items: center;
+  margin-top: 5rem;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  min-width: 200px;
+  transition: all 0.3s ease-in-out;
+
+}
+.course-card:hover{
+  /* box-shadow: 0 0 0 10px var(--orange); */
+  transform: translateY(-5px);
+}
+.course-card h2{
+  font-size: clamp(0.5rem, 5vw, 1rem);
+}
+.course-card p{
+  /* font-size: clamp(0.7rem, 5vw, 1rem);
+   */
+   /* font-size: 1rem;  */
+   font-size: 14px;
+}
+
+.course-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.enroll-button {
+  display: block;
+  background-color: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.enroll-button:hover{
+  transform: scale(1.1);
+  background: var(--orange);
+  color: --;
+}
+
+/* ============= END COURSES SECTIONS=================== */
+
+
+
+
+
+/* =========================================================== */
+/* ====================MAIN SECTIONS END ================== */
+
+/* ====================FOOTER START ================== */
+
+footer {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 10%;
+  background-color: var(--white);
+  text-align: center;
+  height: 2rem;
+}
+footer p{
+  font-size: clamp(0.5rem, 5vw, 1rem);
+
+}
+
+/* ====================FOOTER END ================== */
+
+/* ====================MEDIA QUERY ================== */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    width: 100%;
+    left: 0;
+  }
+
+  .header .search-form {
+    display: none;
+  }
+
+  main,
+  footer {
+    width: 100%;
+    left: 0%;
+    margin: 0 auto;
+  }
+
+  .logo-header {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    display: inline-block;
+  }
+
+  #search-btn {
+    display: block;
+    display: inline-block;
+  }
+}
+@media (max-width: 670px) {
+  .Hero{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+/* @media screen and (max-width: 600px) {
+  .Courses {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+} */
